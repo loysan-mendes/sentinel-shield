@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelShield | Security Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <h1>SentinelShield</h1>
+                <p>Advanced Intrusion Detection & Web Protection</p>
+            </div>
+            <div class="status-badge" title="System monitoring active">
+                <span class="status-dot"></span>
+                System Monitoring Active
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="card">
+                <p class="card-title">Total Requests</p>
+                <div class="card-value" id="total-requests">0</div>
+            </div>
+            <div class="card alert-card">
+                <p class="card-title">Attacks Blocked</p>
+                <div class="card-value" id="blocked-requests">0</div>
+            </div>
+            <div class="card">
+                <p class="card-title">Unique Target IPs Probed</p>
+                <div class="card-value" id="unique-targets">0</div>
+            </div>
+            <div class="card">
+                <p class="card-title">IP Bans Issued</p>
+                <div class="card-value" id="ip-bans">0</div>
+            </div>
+        </div>
+
+        <section class="dashboard-main">
+            <div class="alert-logs">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2>Threat Analytics - Recent Alerts</h2>
+                    <button id="refresh-logs" style="background: none; border: 1px solid var(--glass-border); color: var(--text-muted); cursor: pointer; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem;">Refresh</button>
+                </div>
+                <div class="log-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Source IP</th>
+                                <th>Category</th>
+                                <th>Incident Severity</th>
+                                <th>Detail (Truncated)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logs-tbody">
+                            <tr>
+                                <td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-muted);">Awaiting incoming traffic data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="threat-distribution">
+                <h2>Attack Vector Mix</h2>
+                <div id="distribution-container">
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">No threats detected yet.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
