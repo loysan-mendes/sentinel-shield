@@ -54,10 +54,6 @@ app.use((req, res, next) => {
 
 ## 📊 Dashboard
 Access the real-time security monitor at `http://localhost:3000`.
-
-## 📄 Assignment & Documentation
-For internship evaluators, please see the [SENTINELSHIELD_ASSIGNMENT_SUBMISSION.md](./SENTINELSHIELD_ASSIGNMENT_SUBMISSION.md) for the detailed practical journal and final report.
-
 ## ⚖️ License
 Distributed under the ISC License. See `LICENSE` for more information.
 
